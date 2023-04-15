@@ -2,7 +2,7 @@ package imperativevsdeclarative;
 
 import java.util.stream.IntStream;
 
-public class ImperativeAndDeclarative {
+public class ImperativeAndDeclarativeExample1 {
 
     public static void main(String[] args) {
 
