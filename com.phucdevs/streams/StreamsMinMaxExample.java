@@ -1,6 +1,7 @@
 package streams;
 
 import java.util.Optional;
+import java.util.OptionalLong;
 import java.util.stream.IntStream;
 
 public class StreamsMinMaxExample {
@@ -19,6 +20,13 @@ public class StreamsMinMaxExample {
                 .reduce(0, Long::max));
     }
 
+    public static OptionalLong findMinValue() {
+
+        return IntStream.rangeClosed(6, 10)
+                .asLongStream()
+                .reduce(Long::min);
+    }
+
     public static void main(String[] args) {
 
         System.out.println("findMaxValue: " + findMaxValue());
@@ -27,5 +35,7 @@ public class StreamsMinMaxExample {
         if (maxValueWithOptional.isPresent()) {
             System.out.println("findMaxValueWithOptional: " + maxValueWithOptional.get());
         }
+
+        System.out.println("findMinValue: " + findMinValue());
     }
 }
