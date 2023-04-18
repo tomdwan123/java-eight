@@ -9,3 +9,13 @@
 - Optionals
 - Method References
 - ...
+
+### Stream Terminal Operations
+- Terminal Operations collects the data for you.
+- Terminal Operations starts the whole stream pipeline.
+- Terminal Operations:
+  - forEach()
+  - min()
+  - max()
+  - reduce()
+  - collect() and etc
