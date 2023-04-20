@@ -24,4 +24,9 @@
 Parallel Stream uses the Fork/Join framework that got introduced in java 7.
 How many Threads are created?
 - Number of threads created == number of processors available in this machine
-- 
+
+### Introduction to New Date/Time Libraries
+- LocalDate, LocalTime and LocalDateTime and part of java.time package.
+- These new classes are created with the inspiration from the Joda-Time library.
+- Supporting classes like Instant, Duration, Period and etc.
+- Date, Calendar prior to Java 8.
