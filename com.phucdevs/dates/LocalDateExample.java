@@ -2,6 +2,8 @@ package dates;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoField;
+import java.time.temporal.TemporalAdjuster;
+import java.time.temporal.TemporalAdjusters;
 
 public class LocalDateExample {
 
@@ -25,5 +27,15 @@ public class LocalDateExample {
         System.out.println("getDayOfYear: " + localDate.getDayOfYear());
         System.out.println("Day of month using get: "
                 + localDate.get(ChronoField.DAY_OF_MONTH));
+
+        /**
+         * Modifying LocalDate
+         */
+        System.out.println("plusDays: " + localDate.plusDays(2));
+        System.out.println("plusMonths: " + localDate.plusMonths(2));
+        System.out.println("minusDays: " + localDate.minusDays(2));
+        System.out.println("withYear: " + localDate.withYear(2019));
+        System.out.println("with ChronoField: " + localDate.with(ChronoField.YEAR, 2020));
+        System.out.println("with TemporalAdjusters: " + localDate.with(TemporalAdjusters.firstDayOfMonth()));
     }
 }
