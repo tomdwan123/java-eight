@@ -36,5 +36,9 @@ public class LocalDateExample {
         System.out.println("withYear: " + localDate.withYear(2019));
         System.out.println("with ChronoField: " + localDate.with(ChronoField.YEAR, 2020));
         System.out.println("with TemporalAdjusters: " + localDate.with(TemporalAdjusters.firstDayOfMonth()));
+
+        System.out.println("isEqual: " + localDate.isEqual(localDate1));
+        System.out.println("isBefore: " + localDate.isBefore(localDate1));
+        System.out.println("isAfter: " + localDate.isAfter(localDate1));
     }
 }
