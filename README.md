@@ -19,3 +19,9 @@
   - max()
   - reduce()
   - collect() and etc
+
+### How Parallel Stream works?
+Parallel Stream uses the Fork/Join framework that got introduced in java 7.
+How many Threads are created?
+- Number of threads created == number of processors available in this machine
+- 
