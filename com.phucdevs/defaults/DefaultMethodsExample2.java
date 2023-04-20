@@ -16,14 +16,14 @@ public class DefaultMethodsExample2 {
 
     public static void sortByName(List<Student> students) {
 
-        System.out.println("After sort: ");
+        System.out.println("After sortByName: ");
         students.sort(nameComparator);
         students.forEach(studentConsumer);
     }
 
     public static void sortByGpa(List<Student> students) {
 
-        System.out.println("After sort: ");
+        System.out.println("After sortByGpa: ");
         students.sort(gpaComparator);
         students.forEach(studentConsumer);
     }
@@ -35,6 +35,14 @@ public class DefaultMethodsExample2 {
         students.forEach(studentConsumer);
     }
 
+    public static void sortWithNullValues(List<Student> students) {
+
+        System.out.println("After sortWithNullValues: ");
+        Comparator<Student> studentComparator = Comparator.nullsFirst(nameComparator);
+        students.sort(studentComparator);
+        students.forEach(studentConsumer);
+    }
+
     public static void main(String[] args) {
 
         System.out.println("Before sort: ");
@@ -42,6 +50,7 @@ public class DefaultMethodsExample2 {
         students.forEach(studentConsumer);
         //sortByName(students);
         //sortByGpa(students);
-        comparatorChaining(students);
+        //comparatorChaining(students);
+        sortWithNullValues(students);
     }
 }
